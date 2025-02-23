@@ -10,10 +10,9 @@ int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
-    char Pais[20];
-    char Estado[20];
-    char Cidade[20];
+    char Estado;
     char CodCarta[3];
+    char Cidade[20];
     int Populacao;
     int PonTuristicos;
     float Area;
@@ -23,26 +22,23 @@ int main() {
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
 
-    //Pergunta o nome do país.
-    printf("Qual o nome do Pais? \n");
-    scanf("%s", Pais);
     //Pergunta o nome do estado.
     printf("Qual o nome do Estado? \n");
-    scanf("%s", Estado);
-    //Perguta o nome da cidade.
-    printf("Qual o nome da cidade? \n");
-    scanf("%s", Cidade);
+    scanf("%c", &Estado);
     //Pergunta o código da carta.
     printf("Qual o codigo da carta? \n");
     scanf("%s", CodCarta);
+    //Perguta o nome da cidade.
+    printf("Qual o nome da cidade? \n");
+    scanf("%s", Cidade);
     //Pergunta a população da cidade.
     printf("Qual a população da cidade? \n");
     scanf("%d", &Populacao);
     //Pergunta a área geográfica da cidade.
-    printf("Qual a area geografica da cidade? \n");
+    printf("Qual a area geografica da cidade (em km²)? \n");
     scanf("%f", &Area);
     //Perguta o PIB da cidade.
-    printf("Qual o PIB da cidade? \n");
+    printf("Qual o PIB da cidade (Bilhoes de reais)? \n");
     scanf("%f", &PIB);
     //Pergunta o número de pontos turísticos da cidade.
     printf("Quantos pontos turisticos ha na cidade? \n");
@@ -51,13 +47,12 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("Pais: %s\n", Pais);
-    printf("Estado: %s\n", Estado);
+    printf("Estado: %c\n", Estado);
     printf("Cidade: %s\n", Cidade);
     printf("codigo da carta: %s\n", CodCarta);
     printf("Populacao: %d\n", Populacao);
-    printf("Area geografica da cidade: %2.f\n", Area);
-    printf("PIB da cidade: %2.f\n", PIB);
+    printf("Area (em km²): %f\n", Area);
+    printf("PIB da cidade (Bilhoes de reais): %f\n", PIB);
     printf("Pontos turisticos: %d\n", PonTuristicos);
 
     return 0;
