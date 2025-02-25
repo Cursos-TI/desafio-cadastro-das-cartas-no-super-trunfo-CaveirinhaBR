@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <locale.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -7,11 +8,12 @@
 //Teste larissa
 
 int main() {
+    setlocale(LC_ALL, "pt_BR.UTF-8");
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
     char Estado;
-    char CodCarta[3];
+    char CodCarta[20];
     char Cidade[20];
     int Populacao;
     int PonTuristicos;
@@ -26,7 +28,7 @@ int main() {
     printf("Qual o nome do Estado? \n");
     scanf("%c", &Estado);
     //Pergunta o código da carta.
-    printf("Qual o codigo da carta? \n");
+    printf("Qual o código da carta? \n");
     scanf("%s", CodCarta);
     //Perguta o nome da cidade.
     printf("Qual o nome da cidade? \n");
@@ -35,13 +37,13 @@ int main() {
     printf("Qual a população da cidade? \n");
     scanf("%d", &Populacao);
     //Pergunta a área geográfica da cidade.
-    printf("Qual a area geografica da cidade (em km²)? \n");
+    printf("Qual a área geográfica da cidade (em km²)? \n");
     scanf("%f", &Area);
     //Perguta o PIB da cidade.
     printf("Qual o PIB da cidade (Bilhoes de reais)? \n");
     scanf("%f", &PIB);
     //Pergunta o número de pontos turísticos da cidade.
-    printf("Quantos pontos turisticos ha na cidade? \n");
+    printf("Quantos pontos turísticos ha na cidade? \n");
     scanf("%d", &PonTuristicos);
     
     // Exibição dos Dados das Cartas:
@@ -49,11 +51,11 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     printf("Estado: %c\n", Estado);
     printf("Cidade: %s\n", Cidade);
-    printf("codigo da carta: %s\n", CodCarta);
-    printf("Populacao: %d\n", Populacao);
-    printf("Area (em km²): %f\n", Area);
+    printf("Código da carta: %s\n", CodCarta);
+    printf("População: %d\n", Populacao);
+    printf("Área (em km²): %f\n", Area);
     printf("PIB da cidade (Bilhoes de reais): %f\n", PIB);
-    printf("Pontos turisticos: %d\n", PonTuristicos);
+    printf("Pontos turísticos: %d\n", PonTuristicos);
 
     return 0;
 }
